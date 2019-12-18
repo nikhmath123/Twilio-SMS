@@ -13,7 +13,7 @@ public class TwilioInitializer {
 	@Autowired
 	public TwilioInitializer(TwilioConfiguration twilioConfig) {
 		this.twilioConfig = twilioConfig;
-		Twilio.init(twilioConfig.getAccountSID(), twilioConfig.getAuthToken());
+		Twilio.init(twilioConfig.getACCOUNT_SID(), twilioConfig.getAUTH_TOKEN());
 	}
 	
 }
