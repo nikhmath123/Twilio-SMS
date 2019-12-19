@@ -7,10 +7,9 @@ import com.twilio.rest.api.v2010.account.Message;
 
 import com.twilio.type.PhoneNumber;
 
-@Service
+@Service("twilio")
 public class TwilioTextSender implements TextMessageSender {
 	
-	@SuppressWarnings("unused")
 	private final TwilioConfiguration twilioConfig;
 	
 	@Autowired
@@ -20,7 +19,6 @@ public class TwilioTextSender implements TextMessageSender {
 
 	@Override
 	public void sendText(TextMessageRequest textRequest) {
-		
 		if(isPhoneNumberValid(textRequest.getPhoneNumber())) {
 			Message.creator(new PhoneNumber(textRequest.getPhoneNumber()),
 					new PhoneNumber(twilioConfig.getTrialNumber()), 
@@ -29,11 +27,9 @@ public class TwilioTextSender implements TextMessageSender {
 		else {
 			throw new IllegalArgumentException("Phone number is invalid.");
 		}
-		
 	}
 
 	private boolean isPhoneNumberValid(String phoneNumber) {
 		return true;
 	}
-
 }

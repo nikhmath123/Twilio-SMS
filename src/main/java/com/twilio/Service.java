@@ -1,7 +1,6 @@
 package com.twilio;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 @org.springframework.stereotype.Service
 public class Service {
@@ -9,7 +8,7 @@ public class Service {
 	private final TextMessageSender textSender;
 	
 	@Autowired
-	public Service(@Qualifier("twilio") TwilioTextSender textSender) {
+	public Service(TwilioTextSender textSender) {
 		this.textSender = textSender;
 	}
 	

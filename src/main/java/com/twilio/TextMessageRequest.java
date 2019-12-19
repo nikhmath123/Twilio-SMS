@@ -19,7 +19,7 @@ public class TextMessageRequest {
 	
 	@Override
 	public String toString() {
-		return "TextMessageRequest{" + "phoneNumber=..." + '\'' + ", message ='" + message + '\'' + '}';
+		return "TextRequest{" + "phoneNumber= ..." + '\'' + ", message='" + message + '\'' + '}';
 	}
 
 }

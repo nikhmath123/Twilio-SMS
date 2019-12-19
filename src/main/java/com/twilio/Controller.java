@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("api/v1/text")
+@RequestMapping("api/text")
 @RestController
 public class Controller {
 
@@ -20,7 +20,7 @@ public class Controller {
 	}
 	
 	@PostMapping
-	public void sendText(@RequestBody @Valid TextMessageRequest textRequest) {
+	public void sendText(@Valid @RequestBody TextMessageRequest textRequest) {
 		service.sendText(textRequest);
 	}
 }
