@@ -3,7 +3,7 @@
 <img src = "/images/twilio%20logo.jpg" width = "340" height = "170" />
 
 ## Project Purpose:
-`The purpose of this project was to integrate the Twilio API using REST endpoints to send and receive text messages.`
+The purpose of this project was to integrate the Twilio API using REST endpoints to send and receive text messages.
 
 ## Setup
 <p> First, I created a Twilio trial account and set up a phone number. </p>
